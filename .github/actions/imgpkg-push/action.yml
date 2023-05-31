@@ -40,8 +40,9 @@ runs:
       data:
         version: ${{ env.VERSION }}
       EOF
-      
-      cat imgpkg-bundle/version.yml
+
+      cat imgpkg-bundle/config/version.yml
+
 
   - name: Create imagevalues.yaml
     shell: bash
