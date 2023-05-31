@@ -40,15 +40,15 @@ runs:
       data:
         version: ${{ env.VERSION }}
       EOF
-      
+
       cat imgpkg-bundle/config/version.yml
 
   - name: Create imagevalues.yaml
     shell: bash
     run: |
-      
       setup_ca_certs_image="$(cat ${{inputs.images_dir}}/setup_ca_certs)"
       webhook_image="$(cat ${{inputs.images_dir}}/webhook)"
+
       cat <<EOF > imgpkg-bundle/config/imagevalues.yml
       #@data/values
       ---
